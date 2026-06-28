@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>摄影后期学习记录</title>
+    <link rel="stylesheet" href="assets/css/notes.css">
+  </head>
+  <body>
+    <main class="page with-review">
+      <aside class="sidebar" aria-label="目录">
+        <h2>目录</h2>
+        <ol>
+          <li>
+            <a href="#basic">基础知识</a>
+            <ul>
+              <li>
+                <a href="#light-contrast">明暗与对比</a>
+                <ul>
+                  <li><a href="#brightness-contrast-layer">亮度/对比度调整</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#color-saturation">色彩与饱和度</a>
+                <ul>
+                  <li><a href="#vibrance-portrait-color">自然饱和度调整</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#style-effects">风格效果</a>
+                <ul>
+                  <li><a href="#soft-texture-black-white">黑白照片柔和纹理</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#layers-compositing">图层与合成</a>
+                <ul>
+                  <li><a href="#add-image-smart-object">添加外部图片</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#retouching-repair">修饰与修复</a>
+                <ul>
+                  <li><a href="#retouch-separate-layer">独立图层修饰</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#workflow">后期流程</a></li>
+          <li><a href="#tools">软件工具</a></li>
+        </ol>
+      </aside>
+
+      <div class="content">
+        <header class="hero">
+          <h1>摄影后期学习记录</h1>
+          <p>用于整理修图、调色、影调、色彩、局部调整、输出与软件操作等后期知识。</p>
+          <nav class="nav" aria-label="文档切换">
+            <a href="摄影前期.html">查看摄影前期</a>
+          </nav>
+        </header>
+
+        <section id="basic">
+          <h2>基础知识</h2>
+
+          <article id="light-contrast">
+            <h3>明暗与对比</h3>
+
+            <article id="brightness-contrast-layer">
+              <h4>亮度/对比度调整：提亮照片并恢复暗部细节</h4>
+              <div class="meta">
+                <span class="tag">分类：基础知识</span>
+                <span class="tag">软件：Photoshop</span>
+                <span class="tag">主题：影调调整</span>
+                <span class="tag">难度：入门</span>
+                <span class="tag">记录日期：2026-06-28</span>
+              </div>
+
+              <p>
+                当照片整体偏暗、暗部细节被压住时，可以使用
+                <strong>亮度/对比度调整图层</strong> 来提亮画面，并通过对比度让照片看起来更清晰或更柔和。
+              </p>
+
+              <figure class="study-image">
+                <img
+                  src="assets/images/brightness-contrast-shadow-details.png"
+                  alt="暗照片提亮前后对比：左侧偏暗，右侧暗部细节更清楚"
+                  loading="lazy"
+                >
+                <figcaption>提亮的目标不是单纯变白，而是让暗部里的主体、纹理和空间关系重新可见。</figcaption>
+              </figure>
+
+              <div class="note">
+                核心思路：先用亮度把隐藏在暗部里的信息拉出来，再根据画面状态微调对比度。画面灰、发闷时可以增加对比度；反差已经很强时可以降低对比度，避免亮部和暗部过硬。
+              </div>
+
+              <h4>适用场景</h4>
+              <ul class="summary-list">
+                <li>照片曝光偏暗，但仍有可恢复的暗部细节。</li>
+                <li>照片整体发灰，需要增加明暗差异。</li>
+                <li>照片反差太强，需要稍微压低对比，让细节更容易看清。</li>
+              </ul>
+
+              <h4>操作步骤</h4>
+              <ol class="steps">
+                <li>在 Photoshop 中打开需要调整的照片。</li>
+                <li>新建一个“亮度/对比度”调整图层。</li>
+                <li>提高亮度，让暗部中的主体、纹理和环境信息显现出来。</li>
+                <li>根据照片状态调整对比度：画面过灰就提高对比度，画面反差过强就降低对比度。</li>
+                <li>观察整体效果，避免只盯着局部导致画面变得不自然。</li>
+              </ol>
+
+              <h4>学习要点</h4>
+              <ul class="checklist">
+                <li><strong>调整图层是非破坏式编辑。</strong> 它不会直接改动原图，后续可以随时重新调整参数。</li>
+                <li><strong>亮度解决“看不清”的问题。</strong> 它主要影响照片整体明暗，适合先把暗部信息拉出来。</li>
+                <li><strong>对比度解决“层次感”的问题。</strong> 提高对比会让明暗差更明显，降低对比会让过硬的影调变柔和。</li>
+                <li><strong>不要只追求变亮。</strong> 提亮过度会让照片发灰、失去氛围，也可能让亮部显得刺眼。</li>
+              </ul>
+
+              <h4>复习问题</h4>
+              <ul class="review-list">
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="调整图层属于非破坏式编辑，不会直接改变原始照片像素。这样后续可以随时回到亮度/对比度参数重新微调，也可以关闭、降低不透明度或删除这一步调整。"
+                  >
+                    为什么建议使用调整图层，而不是直接改原图？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="画面提亮后如果显得灰、发闷、层次弱，可以适当增加对比度；如果照片本身明暗反差已经很强，亮部刺眼或暗部死黑，就应该降低对比度，让过硬的明暗关系变柔和。"
+                  >
+                    什么时候应该增加对比度？什么时候应该降低对比度？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="优先检查对比度。只提高亮度容易把暗部拉亮，但也会让整体变灰；这时可以适当增加对比度，重新建立明暗层次，同时观察亮部是否过曝。"
+                  >
+                    如果提亮后照片变灰，下一步应该检查哪个参数？
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </article>
+
+          <article id="color-saturation">
+            <h3>色彩与饱和度</h3>
+
+            <article id="vibrance-portrait-color">
+              <h4>自然饱和度调整：增强人像色彩并保护肤色</h4>
+              <div class="meta">
+                <span class="tag">分类：基础知识</span>
+                <span class="tag">软件：Photoshop</span>
+                <span class="tag">主题：色彩调整</span>
+                <span class="tag">难度：入门</span>
+                <span class="tag">记录日期：2026-06-28</span>
+              </div>
+
+              <p>
+                当人像照片颜色偏淡、背景和服装不够鲜活时，可以使用
+                <strong>自然饱和度调整图层</strong> 来提升低饱和颜色的强度。它比直接提高饱和度更温和，尤其适合在人像中保留自然肤色。
+              </p>
+
+              <figure class="study-image">
+                <img
+                  src="assets/images/vibrance-portrait-color.png"
+                  alt="人像自然饱和度调整前后对比：左侧颜色偏淡，右侧背景和服装更鲜活且肤色自然"
+                  loading="lazy"
+                >
+                <figcaption>自然饱和度适合先唤醒偏淡的颜色，再观察肤色是否仍然真实。</figcaption>
+              </figure>
+
+              <div class="note">
+                核心思路：自然饱和度优先增强原本不够鲜艳的颜色，对已经很鲜艳的颜色和肤色更克制；饱和度会更平均地增强所有颜色，容易让肤色发红、发橙或显得不自然。
+              </div>
+
+              <h4>适用场景</h4>
+              <ul class="summary-list">
+                <li>人像整体颜色偏淡，衣服、植物、背景缺少活力。</li>
+                <li>想让照片更鲜明，但不希望肤色变得夸张。</li>
+                <li>照片已经有较好的曝光和对比，只需要补充色彩表现。</li>
+              </ul>
+
+              <h4>操作步骤</h4>
+              <ol class="steps">
+                <li>在 Photoshop 中打开人像照片。</li>
+                <li>新建一个“自然饱和度”调整图层。</li>
+                <li>先提高自然饱和度，让偏淡的颜色逐渐变得鲜活。</li>
+                <li>谨慎调整饱和度，只在整体颜色仍然偏弱时少量增加。</li>
+                <li>重点检查肤色、嘴唇、阴影处和背景高饱和区域，避免颜色过度。</li>
+              </ol>
+
+              <h4>学习要点</h4>
+              <ul class="checklist">
+                <li><strong>自然饱和度更适合人像起步。</strong> 它倾向于增强不够饱和的颜色，同时减少肤色被过度推高的风险。</li>
+                <li><strong>饱和度影响更直接。</strong> 它会更统一地增强所有颜色，速度快但更容易出现失真。</li>
+                <li><strong>肤色是判断是否过度的关键。</strong> 如果皮肤开始发橙、发红或失去层次，通常说明色彩增强过头了。</li>
+                <li><strong>色彩调整要和明暗一起看。</strong> 曝光不足或对比太弱时，单独增加颜色可能会显脏或发闷。</li>
+              </ul>
+
+              <h4>复习问题</h4>
+              <ul class="review-list">
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="自然饱和度会优先增强原本偏淡、不够鲜艳的颜色，并且对肤色和已经很鲜艳的颜色更克制；饱和度更平均地推动所有颜色，效果更直接，也更容易让颜色失真。"
+                  >
+                    自然饱和度和饱和度的主要区别是什么？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="人像里最需要保护的是肤色。直接大幅提高饱和度可能让皮肤发红、发橙、嘴唇过艳，甚至让阴影里的颜色变脏，所以通常先用自然饱和度会更稳。"
+                  >
+                    为什么人像调色时通常先调整自然饱和度？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="重点看肤色是否自然、嘴唇是否过艳、背景高饱和区域是否刺眼。如果这些地方开始显得夸张，就应该降低自然饱和度或饱和度，并重新检查整体明暗。"
+                  >
+                    判断色彩是否调过头时，应该优先检查哪些地方？
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </article>
+
+          <article id="style-effects">
+            <h3>风格效果</h3>
+
+            <article id="soft-texture-black-white">
+              <h4>黑白照片柔和纹理：用滤镜营造艺术氛围</h4>
+              <div class="meta">
+                <span class="tag">分类：基础知识</span>
+                <span class="tag">软件：Photoshop</span>
+                <span class="tag">主题：滤镜与纹理</span>
+                <span class="tag">难度：入门</span>
+                <span class="tag">记录日期：2026-06-28</span>
+              </div>
+
+              <p>
+                黑白照片本身已经去除了色彩干扰，画面会更依赖明暗、质感和氛围。使用
+                <strong>滤镜效果</strong> 可以给黑白照片加入柔和、颗粒、纸感或轻微虚化，让照片更接近胶片、暗房或手工印相的观感。
+              </p>
+
+              <figure class="study-image">
+                <img
+                  src="assets/images/soft-texture-black-white.png"
+                  alt="黑白照片柔和纹理效果前后对比：左侧清晰干净，右侧加入柔焦、颗粒和纸感纹理"
+                  loading="lazy"
+                >
+                <figcaption>柔和纹理的目标是增加情绪和质感，而不是让主体失去可读性。</figcaption>
+              </figure>
+
+              <div class="note">
+                核心思路：先判断照片的主体和情绪，再选择滤镜强度。纹理、颗粒和柔焦适合服务画面氛围；如果效果盖过主体，应该降低强度或用蒙版只保留局部。
+              </div>
+
+              <h4>适用场景</h4>
+              <ul class="summary-list">
+                <li>黑白照片过于干净，缺少胶片感、纸感或情绪层次。</li>
+                <li>想让人像、街拍、静物呈现更柔和、更怀旧的视觉风格。</li>
+                <li>照片主体清楚，但背景或边缘区域需要更有氛围。</li>
+              </ul>
+
+              <h4>操作步骤</h4>
+              <ol class="steps">
+                <li>先完成基础黑白转换和明暗调整，确保主体层次清楚。</li>
+                <li>使用滤镜或滤镜库添加柔焦、颗粒、纹理等效果。</li>
+                <li>降低滤镜强度或图层不透明度，让效果融入照片而不是压过照片。</li>
+                <li>用蒙版控制效果范围：主体重要细节可以弱化效果，背景和边缘可以保留更多纹理。</li>
+                <li>放大检查主体轮廓、眼睛、文字、建筑线条等关键细节是否仍然清晰。</li>
+              </ol>
+
+              <h4>学习要点</h4>
+              <ul class="checklist">
+                <li><strong>滤镜是风格工具，不是修复工具。</strong> 它适合建立情绪和质感，但不能替代曝光、对比和构图。</li>
+                <li><strong>黑白照片更容易暴露质感问题。</strong> 没有色彩分散注意力后，颗粒、纹理、虚化和边缘细节会更明显。</li>
+                <li><strong>蒙版能避免全图效果过重。</strong> 柔和纹理常常适合背景和边缘，但主体关键部位需要保留可读性。</li>
+                <li><strong>强度要服务照片情绪。</strong> 怀旧、梦幻、安静的照片可以更柔；纪实、建筑、产品类照片通常要更克制。</li>
+              </ul>
+
+              <h4>复习问题</h4>
+              <ul class="review-list">
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="因为黑白照片去掉了色彩信息，观众会更集中地看明暗、形状、颗粒和边缘质感。加入柔和纹理可以强化氛围，但如果过重，也会更明显地破坏主体细节。"
+                  >
+                    为什么黑白照片适合练习纹理和滤镜效果？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="如果主体轮廓、眼睛、面部纹理、建筑线条或画面焦点开始变得难以辨认，就说明滤镜效果可能盖过了照片本身。此时应降低强度、不透明度，或用蒙版保护主体。"
+                  >
+                    如何判断柔和纹理效果是否过重？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="蒙版可以把滤镜限制在需要氛围的区域，例如背景、边缘、天空或暗部，同时减弱主体关键区域的效果。这样照片既有风格，又不会牺牲可读性。"
+                  >
+                    为什么添加滤镜后常常需要配合蒙版？
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </article>
+
+          <article id="layers-compositing">
+            <h3>图层与合成</h3>
+
+            <article id="add-image-smart-object">
+              <h4>添加外部图片：把素材作为智能对象图层置入</h4>
+              <div class="meta">
+                <span class="tag">分类：基础知识</span>
+                <span class="tag">软件：Photoshop</span>
+                <span class="tag">主题：图层与合成</span>
+                <span class="tag">难度：入门</span>
+                <span class="tag">记录日期：2026-06-28</span>
+              </div>
+
+              <p>
+                在一个 Photoshop 文档中添加另一张图片时，可以使用
+                <strong>置入嵌入对象</strong>。被添加的图片会以独立图层进入当前文档，通常会保留为智能对象，便于移动、缩放、旋转和继续合成。
+              </p>
+
+              <figure class="study-image">
+                <img
+                  src="assets/images/add-image-smart-object-layer.png"
+                  alt="把外部图片作为独立图层添加到主画面中的示意图"
+                  loading="lazy"
+                >
+                <figcaption>把素材作为独立图层置入，可以先摆放和变换，再决定是否进一步蒙版、调色或融合。</figcaption>
+              </figure>
+
+              <div class="note">
+                核心思路：置入图片不是把素材直接“粘死”在原图上，而是让它成为一个可管理的图层。智能对象尤其适合反复缩放和调整，因为它更能保护原始素材信息。
+              </div>
+
+              <h4>适用场景</h4>
+              <ul class="summary-list">
+                <li>制作拼贴、海报、封面、社交媒体图片或作品集展示图。</li>
+                <li>把天空、纹理、画框、产品图、背景图等素材加入当前照片。</li>
+                <li>需要反复移动、缩放或旋转素材，并希望尽量保留画质。</li>
+              </ul>
+
+              <h4>操作步骤</h4>
+              <ol class="steps">
+                <li>打开作为主画面的 Photoshop 文档。</li>
+                <li>选择“文件”中的“置入嵌入对象”，从本地选择要添加的图片。</li>
+                <li>图片进入画面后，拖动边角控制点调整大小和位置。</li>
+                <li>确认变换后，在图层面板中把它当作独立图层继续处理。</li>
+                <li>根据合成需要继续使用蒙版、混合模式、调整图层或不透明度，让新图片融入画面。</li>
+              </ol>
+
+              <h4>学习要点</h4>
+              <ul class="checklist">
+                <li><strong>置入会生成独立图层。</strong> 这让素材可以单独移动、隐藏、调整顺序或删除。</li>
+                <li><strong>智能对象更适合反复变换。</strong> 多次缩放时，它比普通像素图层更能保留原始画质。</li>
+                <li><strong>添加图片只是合成的开始。</strong> 真正自然的合成还要继续匹配透视、光线、色温、清晰度和颗粒。</li>
+                <li><strong>确认前先看边缘与比例。</strong> 外部素材的大小、角度和边缘处理会直接决定合成是否可信。</li>
+              </ul>
+
+              <h4>复习问题</h4>
+              <ul class="review-list">
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="因为置入的图片会作为独立图层进入文档，可以单独移动、缩放、隐藏、删除和继续调整。这样不会把新素材直接固定到原图像素上，后续修改空间更大。"
+                  >
+                    为什么添加外部图片时建议使用置入，而不是直接粘贴后合并？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="智能对象会保留更多原始素材信息，适合反复缩放、旋转和重新编辑。普通像素图层多次缩放后更容易损失画质，尤其是先缩小再放大时。"
+                  >
+                    智能对象图层在缩放时有什么优势？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="应检查比例是否合理、透视是否一致、光线方向是否匹配、色温和对比是否接近、边缘是否干净。必要时再用蒙版、调整图层和混合模式让素材融入主画面。"
+                  >
+                    把图片放进画面后，合成前应该检查哪些地方？
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </article>
+
+          <article id="retouching-repair">
+            <h3>修饰与修复</h3>
+
+            <article id="retouch-separate-layer">
+              <h4>独立图层修饰：用空白图层保留原图安全</h4>
+              <div class="meta">
+                <span class="tag">分类：基础知识</span>
+                <span class="tag">软件：Photoshop</span>
+                <span class="tag">主题：修饰与修复</span>
+                <span class="tag">难度：入门</span>
+                <span class="tag">记录日期：2026-06-28</span>
+              </div>
+
+              <p>
+                修掉照片里的小瑕疵、灰尘、杂点或干扰物时，建议把修饰结果放在
+                <strong>单独的空白图层</strong> 上。这样可以保留原始照片不被直接破坏，后续也能随时降低强度、擦除局部或重新修。
+              </p>
+
+              <figure class="study-image">
+                <img
+                  src="assets/images/retouch-separate-layer.png"
+                  alt="在独立图层上修饰照片瑕疵的示意图"
+                  loading="lazy"
+                >
+                <figcaption>独立修饰图层像一张透明胶片，只记录修复笔触，原图仍然保留在下方。</figcaption>
+              </figure>
+
+              <div class="note">
+                核心思路：先新建空白图层，再使用修复类工具，并让工具从当前图层和下方图层取样。修饰笔触留在新图层上，原图像素不被直接改动。
+              </div>
+
+              <h4>适用场景</h4>
+              <ul class="summary-list">
+                <li>去除照片里的灰尘、斑点、小划痕、传感器污点。</li>
+                <li>清理画面边缘的小干扰物，例如地面杂物、墙面污渍、背景小亮点。</li>
+                <li>做人像轻微修饰，同时希望保留回退和微调空间。</li>
+              </ul>
+
+              <h4>操作步骤</h4>
+              <ol class="steps">
+                <li>打开照片后，在原图上方新建一个空白图层，并命名为“修饰”或“Retouch”。</li>
+                <li>选择污点修复画笔、修复画笔或仿制图章等修复类工具。</li>
+                <li>在工具选项中启用对所有图层或当前及下方图层取样，让工具能读取原图信息。</li>
+                <li>在空白修饰图层上点击或轻刷瑕疵区域，让修复笔触写入独立图层。</li>
+                <li>通过开关图层、调节不透明度或添加蒙版检查修饰是否自然。</li>
+              </ol>
+
+              <h4>学习要点</h4>
+              <ul class="checklist">
+                <li><strong>独立图层是非破坏式修图。</strong> 原图仍然完整保留，修错时只需要改修饰图层。</li>
+                <li><strong>取样设置很关键。</strong> 如果工具只取样当前空白图层，可能因为没有可读取像素而无法正常修复。</li>
+                <li><strong>小笔刷、多次修更自然。</strong> 一次刷太大片容易产生重复纹理、糊块或不自然边缘。</li>
+                <li><strong>修饰要尊重照片真实质感。</strong> 人像不应把皮肤全部磨平，静物和风景也要保留合理纹理。</li>
+              </ul>
+
+              <h4>复习问题</h4>
+              <ul class="review-list">
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="因为修饰笔触会留在单独图层上，原图像素不会被直接改动。后续如果发现修得太重、位置不自然或想恢复局部，只需要调整修饰图层，而不用重新找回原图。"
+                  >
+                    为什么修饰照片时建议新建空白图层？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="需要让修复工具从当前及下方图层或所有图层取样。空白修饰图层本身没有像素，如果工具只看当前图层，就无法根据原图内容判断该如何修复。"
+                  >
+                    在空白图层上修复时，工具取样设置为什么重要？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="可以开关修饰图层对比前后，也可以降低图层不透明度观察效果是否过重。重点检查修复区域是否出现重复纹理、糊块、边缘断裂或质感突然变化。"
+                  >
+                    如何检查独立图层修饰是否自然？
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </article>
+        </section>
+
+        <section id="workflow">
+          <h2>后期流程</h2>
+          <p class="empty">暂无记录。后续可整理导入、筛选、基础校正、局部处理、导出等流程。</p>
+        </section>
+
+        <section id="tools">
+          <h2>软件工具</h2>
+          <p class="empty">暂无记录。后续可整理 Photoshop、Lightroom、Camera Raw 等工具笔记。</p>
+        </section>
+      </div>
+
+      <aside class="review-panel" aria-label="复习答案" aria-live="polite">
+        <h2>复习答案</h2>
+        <p>点击正文里的复习问题，这里会显示对应答案。</p>
+        <h3 data-answer-title>尚未选择问题</h3>
+        <p data-answer-text>先从“亮度/对比度调整”里的问题开始回顾。</p>
+      </aside>
+    </main>
+    <script src="assets/js/review.js"></script>
+  </body>
+</html>
