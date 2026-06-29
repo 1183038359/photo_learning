@@ -36,6 +36,7 @@
                 <a href="#layers-compositing">图层与合成</a>
                 <ul>
                   <li><a href="#add-image-smart-object">添加外部图片</a></li>
+                  <li><a href="#remove-replace-background">移除并替换照片背景</a></li>
                 </ul>
               </li>
               <li>
@@ -410,6 +411,90 @@
                     data-answer="应检查比例是否合理、透视是否一致、光线方向是否匹配、色温和对比是否接近、边缘是否干净。必要时再用蒙版、调整图层和混合模式让素材融入主画面。"
                   >
                     把图片放进画面后，合成前应该检查哪些地方？
+                  </button>
+                </li>
+              </ul>
+            </article>
+
+            <article id="remove-replace-background">
+              <h4>移除并替换照片背景：用选择主体和蒙版完成基础合成</h4>
+              <div class="meta">
+                <span class="tag">分类：基础知识</span>
+                <span class="tag">软件：Photoshop</span>
+                <span class="tag">主题：图层与合成</span>
+                <span class="tag">难度：入门</span>
+                <span class="tag">记录日期：2026-06-30</span>
+              </div>
+
+              <p>
+                替换照片背景时，核心不是直接擦掉原背景，而是先把主体选出来，再用
+                <strong>图层蒙版</strong> 隐藏旧背景，并把新的背景图层放到主体下方。这样可以保留主体边缘的调整空间，也便于后续重新修改背景。
+              </p>
+
+              <figure class="study-image">
+                <img
+                  src="assets/images/remove-replace-background.png"
+                  alt="使用选择主体和图层蒙版替换照片背景的前后对比示意图"
+                  loading="lazy"
+                >
+                <figcaption>背景替换的关键是让主体边缘、光线方向和新背景的透视关系看起来一致。</figcaption>
+              </figure>
+
+              <div class="note">
+                核心思路：先用自动选择快速得到主体范围，再用图层蒙版把选择变成可修改的遮罩。新背景进入文档后放在主体图层下方，最后检查边缘、光线、色温和比例是否自然。
+              </div>
+
+              <h4>适用场景</h4>
+              <ul class="summary-list">
+                <li>证件照、头像、人像或产品图需要更换干净背景。</li>
+                <li>原背景杂乱、分散注意力，但主体本身状态较好。</li>
+                <li>制作海报、封面、社交媒体图片时，需要把主体放进新的场景。</li>
+              </ul>
+
+              <h4>操作步骤</h4>
+              <ol class="steps">
+                <li>打开主体照片，使用“选择主体”或类似选择工具快速选出人物、产品或主要物体。</li>
+                <li>把选择结果转换为图层蒙版，让旧背景被隐藏，而不是直接删除。</li>
+                <li>检查主体边缘，必要时细化头发、衣物边缘、半透明区域和阴影过渡。</li>
+                <li>置入新的背景图片，并把背景图层移动到主体图层下方。</li>
+                <li>调整新背景的大小、位置、透视、亮度、对比度和色温，让主体与环境更统一。</li>
+              </ol>
+
+              <h4>学习要点</h4>
+              <ul class="checklist">
+                <li><strong>选择主体是起点，不是终点。</strong> 自动选择可以快速建立范围，但复杂边缘仍需要细化。</li>
+                <li><strong>蒙版比橡皮擦更适合背景替换。</strong> 蒙版隐藏像素但不破坏原图，后续可以用黑白画笔继续修边。</li>
+                <li><strong>新背景应该放在主体下方。</strong> 图层顺序决定画面覆盖关系，主体图层需要位于背景之上。</li>
+                <li><strong>合成是否自然取决于匹配。</strong> 只换背景还不够，光线方向、色温、对比度、景深和颗粒感都要相互协调。</li>
+              </ul>
+
+              <h4>复习问题</h4>
+              <ul class="review-list">
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="因为蒙版只是隐藏旧背景，不会真正删除原始像素。后续如果主体边缘选错、头发细节缺失或背景需要重换，可以继续修改蒙版，而不必重新从原图开始。"
+                  >
+                    为什么替换背景时建议使用图层蒙版，而不是直接擦掉背景？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="新背景应该放在主体图层下方。主体通过蒙版保留下来，旧背景被隐藏，新背景从下方露出，这样图层关系清楚，也方便单独调整主体和背景。"
+                  >
+                    新背景图层应该放在主体图层的上方还是下方？
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="review-question"
+                    type="button"
+                    data-answer="重点检查主体边缘是否干净、光线方向是否一致、色温是否统一、背景透视和比例是否合理，以及主体和背景的清晰度、颗粒感是否接近。任何一项不匹配都会让合成显得生硬。"
+                  >
+                    替换背景后，应该检查哪些地方来判断合成是否自然？
                   </button>
                 </li>
               </ul>
